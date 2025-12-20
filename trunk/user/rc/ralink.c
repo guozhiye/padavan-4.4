@@ -751,7 +751,7 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 			fprintf(fp, "MuMimoUlEnable=%d\n", 0);
 		} else {
 			fprintf(fp, "MUTxRxEnable=%d\n", 0);
-			fprintf(fp, "MuMimoDlEnable=%d\n", 1);
+			fprintf(fp, "MuMimoDlEnable=%d\n", 0);
 			fprintf(fp, "MuMimoUlEnable=%d\n", 0);
 		}
 #if defined(BOARD_HAS_5G_11AX) && BOARD_HAS_5G_11AX
@@ -1273,7 +1273,7 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 	fprintf(fp, "HT_BW=%d\n", i_val);
 
 	//HT_BSSCoexistence
-	fprintf(fp, "HT_BSSCoexistence=%d\n", 0);
+	fprintf(fp, "HT_BSSCoexistence=%d\n", 1);
 
 	//HT_BSSCoexAPCntThr
 	fprintf(fp, "HT_BSSCoexAPCntThr=%d\n", 10);
